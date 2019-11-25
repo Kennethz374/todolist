@@ -7,7 +7,7 @@ import TodoItem from "./TodoItem"
 
 
 
-export default function TodoList({ todos, removeTodo,toggleTodo }){
+export default function TodoList({ todos, removeTodo,toggleTodo,editTodo }){
   return (
     <Paper>
       <List>
@@ -20,6 +20,7 @@ export default function TodoList({ todos, removeTodo,toggleTodo }){
             completed={todo.completed} 
             removeTodo={removeTodo}
             toggleTodo={toggleTodo}
+            editTodo = {editTodo}
             />
             <Divider />
           </>
