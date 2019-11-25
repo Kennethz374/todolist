@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import TodoList from "./TodoList"
 import TodoForm from "./TodoForm"
 import Typography from "@material-ui/core/Typography";
