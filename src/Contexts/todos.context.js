@@ -4,8 +4,9 @@
 import React, {createContext} from "react";
 import useTodoState from "../Hooks/useTodoState"
 const defaultTodos = [
-  {id:1, task: "Mow the lawn using goats", completed:false},
-  {id:2, task: "Release lady bugs into garden", completed:true},
+  {id:1, task: "make notes for node.js", completed:false},
+  {id:2, task: "finish cover letter", completed:false},
+  {id:3, task: "study React.js redux", completed:true}
 ]
 
 export const TodosContext = createContext();
