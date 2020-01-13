@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, memo} from 'react';
 import useToggle from "../Hooks/useToggle"
 import EditForm from "./EditForm"
 import ListItem from "@material-ui/core/ListItem";
@@ -11,8 +11,8 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import {DispatchContext} from "../Contexts/todos.context"
 
 
-export default function TodoItem({id, task, completed}) {
-  const dispatch= useContext(DispatchContext)
+function TodoItem({id, task, completed}) {
+  const dispatch = useContext(DispatchContext)
   const [Editing, toggle] = useToggle(false);
   return (
     <ListItem style={{height: "64px"}}>
@@ -37,3 +37,5 @@ export default function TodoItem({id, task, completed}) {
     </ListItem>
   )
 }
+
+export default memo(TodoItem);
